@@ -20,52 +20,9 @@ npm install
 
 > _tip_: `npm i`is shorthand for `npm install``
 
-## Required Tasks
 
-### Running Your Frontend in Dev Mode
 
-The frontend app was built using create-react-app. In order to run the app in development mode use `npm start`. You can change the script in the `package.json` file.
-
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload if you make edits.
-
-```bash
-npm start
-```
-
-### Request Formatting
-
-The frontend should be fairly straightforward and disgestible. You'll primarily work within the `components` folder in order to understand, and if you so choose edit, the endpoints utilized by the components. While working on your backend request handling and response formatting, you can reference the frontend to view how it parses the responses.
-
-After you complete your endpoints, ensure you return to the frontend to confirm your API handles requests and responses appropriately:
-
-- Endpoints defined as expected by the frontend
-- Response body provided as expected by the frontend
-
-### Optional: Updating Endpoints and API behavior
-
-Would you rather the API had different behavior - different endpoints, return the response body in a different format? Go for it! Make the updates to your API and the corresponding updates to the frontend so it works with your API seamlessly.
-
-### Optional: Styling
-
-In addition, you may want to customize and style the frontend by editing the CSS in the `stylesheets` folder.
-
-### Optional: Game Play Mechanics
-
-Currently, when a user plays the game they play up to five questions of the chosen category. If there are fewer than five questions in a category, the game will end when there are no more questions in that category.
-
-You can optionally update this game play to increase the number of questions or whatever other game mechanics you decide. Make sure to specify the new mechanics of the game in the README of the repo you submit so the reviewers are aware that the behavior is correct.
-
-> **Spoiler Alert:** If needed, there are details below regarding the expected endpoints and behavior. But, ONLY look at them if necessary. Give yourself the opportunity to practice understanding code first!
-
----
-
----
-
-## DO NOT PROCEED: ENDPOINT SPOILERS
-
-> Only read the below to confirm your notes regarding the expected API endpoint behavior based on reading the frontend codebase.
-
-### Expected endpoints and behaviors
+## API DETAILED DOCUMENT
 
 `GET '/categories'`
 
@@ -198,7 +155,7 @@ You can optionally update this game play to increase the number of questions or 
 
 ---
 
-`POST '/questions'`
+`POST '/questions/search'`
 
 - Sends a post request in order to search for a specific question by search term
 - Request Body:
