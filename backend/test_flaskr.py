@@ -4,17 +4,26 @@ import unittest
 from flaskr import create_app
 from models import db, Question, Category
 from sqlalchemy import text
+from dotenv import load_dotenv
+import os
 
+# Load environment variables from .env file
+load_dotenv()
+
+database_name_test = os.getenv('DATABASE_NAME_TEST')
+database_user = os.getenv('DATABASE_USER')
+database_password = os.getenv('DATABASE_PASSWORD')
+database_host = os.getenv('DATABASE_HOST')
 
 class TriviaTestCase(unittest.TestCase):
     """This class represents the trivia test case"""
 
     def setUp(self):
         """Define test variables and initialize app."""
-        self.database_name = "trivia_test"
-        self.database_user = "mac"
-        self.database_password = "postgres"
-        self.database_host = "localhost:5432"
+        self.database_name = database_name_test
+        self.database_user = database_user
+        self.database_password = database_password
+        self.database_host = database_host
         self.database_path = f"postgresql://{self.database_user}:{self.database_password}@{self.database_host}/{self.database_name}"
 
         # Create app with the test configuration
